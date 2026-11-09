@@ -7,15 +7,15 @@
      
       <a-assets>
         <img id="beach" src="assets/Beach.jpg">
-        <img id="beachball" src="BeachBall.jpg">
-        <img id="IceCream" src="IceCream.jpg">
-        <img id="IceCreamCone" src="IceCreamCone.jpg">
+        <img id="beachball" src="assets/BeachBall.jpg">
+        <img id="IceCream" src="assets/IceCream.jpg">
+        <img id="IceCreamCone" src="assets/IceCreamCone.jpg">
       </a-assets>
 
       <a-scene>
-      <a-cone position="1 0.75 -3" radius = "0.5" height="1.5"rotation="-100 0 0" src="#beachball"></a-cone>
-      <a-sphere position="0 1.25 -5" radius="1.25"></a-sphere>
-      <a-sphere position="0 1.25 -5" radius="1.25"></a-sphere>
+      <a-cone position="1 0.75 -3" radius = "0.5" height="1.5" rotation="-180 0 0" src="#IceCreamCone"></a-cone>
+      <a-sphere position="1 2.25 -3" radius="1.25" src="#IceCream"></a-sphere>
+      <a-sphere position="-3 1.25 -5" radius="1.25" src="#beachball"></a-sphere>
       <a-sky src="#beach" radius = "30"></a-sky>
     </a-scene>
 
