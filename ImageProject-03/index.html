@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"> </script>
+    <title>Textures - A-Frame School</title>
+    <meta name="description" content="Textures - A-Frame School">
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+
+      <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.6.0/dist/aframe-extras.min.js"></script>
+
+      <a-assets>
+        <a-asset-item id="bb8" src="assets/BB8.obj"></a-asset-item>
+        <a-asset-item id="bike" src="assets/Key_speeder.obj"></a-asset-item>
+        <a-asset-item id="rock" src="assets/Free_rock.obj"></a-asset-item>
+        <a-asset-item id="chopper" src="assets/C1-10P_obj.obj"></a-asset-item>
+        <img id="sandy" src="assets/Sandy.jpg">
+        <img id="Bb8texture" src="assets/Bb8Texture.png">
+        <img id="Biketexture" src="assets/front_Base_Color.png">
+        <img id="Choppertexture" src="assets/Chopper_BaseColor.png">
+        <img id="space" src="assets/equi.jpg">
+        <a-asset-item id="duststorm" src="assets/duststorm.glb"></a-asset-item>
+      </a-assets>
+      
+      <a-sky src="#space"></a-sky>
+      <a-gltf-model src="#duststorm" position="3 0 -20" scale="200 200 200" animation-mixer="clip: *; loop: repeat"></a-gltf-model>
+      <a-obj-model src="#bb8" position="8.259 0 -20" scale=".07 .07 .07" rotation="0 180 0" material="shader:flat;src:#Bb8texture"></a-obj-model>
+      <a-obj-model src="#bike" position="-2.256 0 -20" scale=".003 .003 .003" rotation="0 320 0" material="shader:flat;src:#Biketexture"></a-obj-model>
+      <a-obj-model src="#rock" position="3.345 -22.09 -63.52" scale="5 5 5" rotation="0 320 0" material="shader:flat;src:#sandy"></a-obj-model>
+      <a-obj-model src="#chopper" position="5.536 1.999 -21.54" scale="3 3 3" rotation="0 0 0" material="shader:flat;src:#Choppertexture"></a-obj-model>
+      <a-plane src="#sandy" rotation="-90 0 -2" height="1000" width="1000"></a-plane>
+      <a-light type="ambient" color="#445451"></a-light>
+      <a-light light="color: #ff6000; intensity: 10; type: point"></a-light>
+    
     </a-scene>
   </body>
 </html>
